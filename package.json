@@ -1,0 +1,26 @@
+{
+  "name": "cdk-template",
+  "version": "0.1.0",
+  "bin": {
+    "main": "bin/main.js"
+  },
+  "scripts": {
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.5.0",
+    "@types/node": "^18.0.6",
+    "@types/prettier": "2.6.0",
+    "aws-cdk": "^2.33.0",
+    "aws-cdk-lib": "^2.33.0",
+    "constructs": "^10.1.55",
+    "jest": "^27.5.1",
+    "ts-jest": "^27.1.4",
+    "ts-node": "^10.9.1"
+  },
+  "dependencies": {
+    "source-map-support": "^0.5.21"
+  }
+}
