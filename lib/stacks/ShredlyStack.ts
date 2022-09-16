@@ -30,7 +30,7 @@ export class ShredlyStack extends Stack {
         const originAccessIdentity = new OriginAccessIdentity( this, 'originAccessIdentity' )
         landingPageBucket.grantRead( originAccessIdentity )
 
-        const webhookHostedZone = HostedZone.fromLookup( this, 'shredlyHostedZone', {
+        const hostedZone = HostedZone.fromLookup( this, 'shredlyHostedZone', {
             domainName: 'shred-ly.com.'
         } )
 
@@ -39,7 +39,7 @@ export class ShredlyStack extends Stack {
             subjectAlternativeNames: [
                 'www.shred-ly.com'
             ],
-            validation: CertificateValidation.fromDns( webhookHostedZone )
+            validation: CertificateValidation.fromDns( hostedZone )
         } )
 
         const landingPageDistribution = new Distribution( this, 'landingPageDistribution', {
@@ -61,7 +61,7 @@ export class ShredlyStack extends Stack {
 
 
         new ARecord( this, 'shredlyLandingPage', {
-            zone: webhookHostedZone,
+            zone: hostedZone,
             target: RecordTarget.fromAlias( new CloudFrontTarget( landingPageDistribution ) )
         } )
 
