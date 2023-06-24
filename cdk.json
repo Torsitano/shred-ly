@@ -28,12 +28,11 @@
         "@aws-cdk/core:checkSecretUsage": true,
         "@aws-cdk/aws-iam:minimizePolicies": true,
         "@aws-cdk/core:target-partitions": [
-            "aws",
-            "aws-cn"
+            "aws"
         ],
 
         "prod": {
-            "AwsAccountId": "123456789123",
+            "AwsAccountId": "725903083608",
             "Environment": "Prod",
             "Region": "us-east-1"
         }
