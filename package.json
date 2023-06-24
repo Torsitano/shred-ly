@@ -11,7 +11,7 @@
   "devDependencies": {
     "@types/node": "^18.16.2",
     "aws-cdk": "^2.77.0",
-    "aws-cdk-lib": "^2.77.0",
+    "aws-cdk-lib": "^2.80.0",
     "constructs": "^10.2.9",
     "ts-node": "^10.9.1"
   },
